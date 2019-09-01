@@ -1,11 +1,5 @@
 import time
 import sys
-"""
-Evaluate num if is prim
-"""
-
-def primeFermat(A):
-	return (2**(A-1)%A)==1
 
 # https://en.wikipedia.org/wiki/Primality_test
 def primeSecuentialOptimal(A):
@@ -20,18 +14,6 @@ def primeSecuentialOptimal(A):
 		div+=6
 	
 	return True
-
-def primeSecuential(A):
-	
-	if(A<=3):
-		return True
-	div=int(A/2)       # divisor value for each iteration
-	while div>=2:
-		if((A%div)==0):# only happens if divide in a number diferent of value A
-			return False
-		div-=1
-	return True
-
 
 if __name__ == "__main__":
 	# sys.maxsize Max int value python 9223372036854775807
@@ -53,4 +35,3 @@ if __name__ == "__main__":
 	#endTime=time.time()
 	#fileLog.write("{}	{}	{}\n".format(A,endTime-startTime,sys.getsizeof(primeFermat(A))))
 	#fileLog.close()
-	
